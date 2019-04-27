@@ -11,10 +11,7 @@ module.exports = merge(common, {
   },
  
   plugins: [
-  new WebpackShellPlugin({
-    onBuildStart: ['echo "Starting"'],
-    onBuildEnd: ['sh writehtml.sh']
-  })
+ 
 ],
  
   module: {

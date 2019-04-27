@@ -9,8 +9,7 @@ const WebpackShellPlugin = require('webpack-shell-plugin');
    mode: 'production',
    plugins: [
     new WebpackShellPlugin({
-      onBuildStart: ['echo "Starting"'],
-      onBuildEnd: ['sh writehtml.sh']
+
     })
   ],
      optimization: {

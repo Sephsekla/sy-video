@@ -15,8 +15,6 @@
     "bootstrap": "^4.3.1",
     "gsap": "^2.1.1",
     "ifdef-loader": "^2.1.1",
-    "imagesloaded": "^4.1.4",
-    "jquery": "^3.3.1",
     "jquery-touchswipe": "^1.6.19",
     "magnific-popup": "^1.1.0",
     "pxloader": "^1.1.2",

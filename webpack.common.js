@@ -57,7 +57,7 @@ module.exports =  {
 
   //When run in WordPress we want to use external jquery
   externals: {
-    //jquery: 'jQuery'
+    jquery: 'jQuery'
   },
   module: {
     rules: [

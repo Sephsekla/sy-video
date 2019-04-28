@@ -2930,7 +2930,15 @@ table {
 
 .site-footer {
   background-color: #7dd8bd;
-  color: white; }
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.site-header {
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -3029,16 +3037,15 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%; }
   .main-navigation ul {
     display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    text-align: right; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
       position: absolute;
       top: 100%;
       left: -999em;
@@ -3055,11 +3062,16 @@ a {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
-    float: left;
-    position: relative; }
+    display: inline-block;
+    position: relative;
+    margin-left: 20px; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #1b1e3b;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px; }
 
 /* Small menu. */
 .menu-toggle,

@@ -179,3 +179,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_action( 'after_setup_theme', 'sy_add_media' );
+function sy_add_media() {
+    add_image_size( 'banner', 2000, 400, true ); // (cropped)
+}
+
+add_filter('get_custom_logo','sy_custom_logo',100,1);
+
+function sy_custom_logo($html){
+
+	
+	$html = sprintf(
+		'<a href="%1$s" class="custom-logo-link" rel="home" itemprop="url">%2$s</a>',
+		esc_url( home_url( '/' ) ),
+		'<picture class="logo">
+		<source srcset="'.get_template_directory_uri().'/dist/assets/logo.webp" type="image/webp">
+		<source srcset="'.get_template_directory_uri().'/dist/assets/logo.png" type="image/png">
+		<img src="'.get_template_directory_uri().'/dist/assets/logo.png" alt="SY Media">
+	</picture>'
+	);
+	return $html;
+}

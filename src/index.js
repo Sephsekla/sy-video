@@ -1,4 +1,11 @@
 import './sass/style.scss';
 import { initPopup } from './js/videos';
 
-initPopup;
+$ = jQuery;
+
+window.$ = $;
+window.jQuery = jQuery;
+
+initPopup();
+
+console.log("loaded");

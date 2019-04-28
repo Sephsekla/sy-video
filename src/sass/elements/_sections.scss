@@ -12,3 +12,21 @@ article, .padsection{
 .bg_ow{
     background-color: $color__ow;
 }
+
+.video{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: block;
+    overflow: hidden;
+    img{
+        display: block;
+        transition: 0.1s;
+        transform: none;
+    }
+
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+}

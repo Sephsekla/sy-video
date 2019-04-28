@@ -3310,6 +3310,18 @@ article, .padsection {
 .bg_ow {
   background-color: #edf6f5; }
 
+.video {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  display: block;
+  overflow: hidden; }
+  .video img {
+    display: block;
+    transition: 0.1s;
+    transform: none; }
+  .video:hover img {
+    transform: scale(1.1); }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/

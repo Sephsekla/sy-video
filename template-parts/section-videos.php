@@ -5,7 +5,7 @@
 
                     $video_query = new WP_Query(array(
                         'post_type' => 'video',
-                        'posts_per_page' => 1,
+                        'posts_per_page' => -1,
                     ));
 
                         if($video_query->have_posts()){

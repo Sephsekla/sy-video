@@ -1,0 +1,13 @@
+.banner{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    height: 0;
+
+    padding-bottom: 30%;
+
+    @media(max-width: 767px){
+        background-attachment: scroll;
+    }
+}

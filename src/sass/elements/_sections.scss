@@ -4,7 +4,11 @@
 }
 
 
-article{
+article, .padsection{
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.bg_ow{
+    background-color: $color__ow;
 }

@@ -2955,9 +2955,12 @@ table {
 .entry-header {
   text-transform: uppercase; }
 
-article {
+article, .padsection {
   padding-top: 50px;
   padding-bottom: 50px; }
+
+.bg_ow {
+  background-color: #edf6f5; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -3229,7 +3232,7 @@ a {
 
 .post,
 .page {
-  margin: 0 0 1.5em; }
+  margin: 0; }
 
 .updated:not(.published) {
   display: none; }

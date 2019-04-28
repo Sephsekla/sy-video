@@ -2824,8 +2824,8 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #1b1e3b;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -2927,6 +2927,10 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+
+.site-footer {
+  background-color: #7dd8bd;
+  color: white; }
 
 /*--------------------------------------------------------------
 # Forms

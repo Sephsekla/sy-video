@@ -1,3 +1,8 @@
+$color__ow: #edf6f5;
+$color__teal: #7dd8bd;
+$color__blue: #1b1e3b;
+
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -11,7 +16,7 @@ $color__text-input-focus: #111;
 $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
-$color__text-main: #404040;
+$color__text-main: $color__blue;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

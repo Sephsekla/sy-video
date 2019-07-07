@@ -3181,6 +3181,15 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  position: relative; }
+  h1::after {
+    position: absolute;
+    width: 80%;
+    bottom: -10px;
+    border-bottom: 5px solid #7dd8bd;
+    left: 0; }
+
 p {
   margin-bottom: 1.5em; }
 

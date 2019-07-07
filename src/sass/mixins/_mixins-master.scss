@@ -27,3 +27,28 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin fancy-title(){
+	position: relative;
+
+	&::after{
+		position: absolute;
+		width: 80%;
+		bottom: -10px;
+		border-bottom: 5px solid $color__teal;
+		left: 0;
+	}
+}
+
+@mixin hover-title(){
+	&::after{
+		transition: 0.2s;
+		transform: scalex(0);
+	}
+
+	&:hover{
+		&::after{
+			transform: scalex(100%);
+		}
+	}
+}

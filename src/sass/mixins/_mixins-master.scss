@@ -30,6 +30,7 @@
 
 @mixin fancy-title(){
 	position: relative;
+	display: inline-block;
 
 	&::after{
 		position: absolute;
@@ -37,6 +38,9 @@
 		bottom: -10px;
 		border-bottom: 5px solid $color__teal;
 		left: 0;
+		content: "";
+		transform-origin: left;
+		
 	}
 }
 
@@ -48,7 +52,7 @@
 
 	&:hover{
 		&::after{
-			transform: scalex(100%);
+			transform: scalex(1);
 		}
 	}
 }

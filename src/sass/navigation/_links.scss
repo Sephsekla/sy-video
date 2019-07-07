@@ -16,4 +16,7 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+	@include fancy-title();
+	@include hover-title();
 }

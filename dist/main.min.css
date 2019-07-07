@@ -3182,13 +3182,16 @@ h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
 h1 {
-  position: relative; }
+  position: relative;
+  display: inline-block; }
   h1::after {
     position: absolute;
     width: 80%;
     bottom: -10px;
     border-bottom: 5px solid #7dd8bd;
-    left: 0; }
+    left: 0;
+    content: "";
+    transform-origin: left; }
 
 p {
   margin-bottom: 1.5em; }
@@ -3412,7 +3415,9 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: royalblue;
+  position: relative;
+  display: inline-block; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -3421,6 +3426,19 @@ a {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+  a::after {
+    position: absolute;
+    width: 80%;
+    bottom: -10px;
+    border-bottom: 5px solid #7dd8bd;
+    left: 0;
+    content: "";
+    transform-origin: left; }
+  a::after {
+    transition: 0.2s;
+    transform: scalex(0); }
+  a:hover::after {
+    transform: scalex(1); }
 
 /*--------------------------------------------------------------
 ## Menus

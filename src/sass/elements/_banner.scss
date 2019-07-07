@@ -12,4 +12,17 @@
     @media(max-width: 767px){
         background-attachment: scroll;
     }
+
+    &.banner-home{
+        position: relative;
+        overflow: hidden;
+
+        > div{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translatey(-50%);
+
+        }
+    }
 }

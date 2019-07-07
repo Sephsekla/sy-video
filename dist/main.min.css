@@ -2513,6 +2513,40 @@ html {
   .mx-xl-auto {
     margin-left: auto !important; } }
 
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden; }
+  .embed-responsive::before {
+    display: block;
+    content: ""; }
+  .embed-responsive .embed-responsive-item,
+  .embed-responsive iframe,
+  .embed-responsive embed,
+  .embed-responsive object,
+  .embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; }
+
+.embed-responsive-21by9::before {
+  padding-top: 42.85714%; }
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%; }
+
+.embed-responsive-4by3::before {
+  padding-top: 75%; }
+
+.embed-responsive-1by1::before {
+  padding-top: 100%; }
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -3321,6 +3355,14 @@ table {
   @media (max-width: 767px) {
     .banner {
       background-attachment: scroll; } }
+  .banner.banner-home {
+    position: relative;
+    overflow: hidden; }
+    .banner.banner-home > div {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translatey(-50%); }
 
 .entry-header {
   text-transform: uppercase; }

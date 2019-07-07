@@ -46,6 +46,7 @@ if ( ! function_exists( 'sy_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'sy' ),
+				'footer' => esc_html__( 'Footer', 'sy' ),
 			)
 		);
 
@@ -137,15 +138,13 @@ add_action( 'widgets_init', 'sy_widgets_init' );
  */
 function sy_scripts() {
 
-	wp_enqueue_style( 'sy-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+	wp_enqueue_style( 'sy-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700' );
 
-
-	wp_enqueue_style( 'sy-style', get_template_directory_uri() . '/dist/main.min.css', array('sy-fonts'), filemtime( get_template_directory() . '/dist/main.min.css' ) );
+	wp_enqueue_style( 'sy-style', get_template_directory_uri() . '/dist/main.min.css', array( 'sy-fonts' ), filemtime( get_template_directory() . '/dist/main.min.css' ) );
 
 	wp_enqueue_script( 'sy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'sy-animations', get_template_directory_uri() . '/dist/main.js', array('jquery'), filemtime(get_template_directory() . '/dist/main.js'), true );
-
+	wp_enqueue_script( 'sy-animations', get_template_directory_uri() . '/dist/main.js', array( 'jquery' ), filemtime( get_template_directory() . '/dist/main.js' ), true );
 
 	wp_enqueue_script( 'sy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -189,18 +188,17 @@ function sy_add_media() {
 
 }
 
-add_filter('get_custom_logo','sy_custom_logo',100,1);
+add_filter( 'get_custom_logo', 'sy_custom_logo', 100, 1 );
 
-function sy_custom_logo($html){
+function sy_custom_logo( $html ) {
 
-	
 	$html = sprintf(
 		'<a href="%1$s" class="custom-logo-link" rel="home" itemprop="url">%2$s</a>',
 		esc_url( home_url( '/' ) ),
 		'<picture class="logo">
-		<source srcset="'.get_template_directory_uri().'/dist/assets/logo.webp" type="image/webp">
-		<source srcset="'.get_template_directory_uri().'/dist/assets/logo.png" type="image/png">
-		<img src="'.get_template_directory_uri().'/dist/assets/logo.png" alt="SY Media">
+		<source srcset="' . get_template_directory_uri() . '/dist/assets/logo.webp" type="image/webp">
+		<source srcset="' . get_template_directory_uri() . '/dist/assets/logo.png" type="image/png">
+		<img src="' . get_template_directory_uri() . '/dist/assets/logo.png" alt="SY Media">
 	</picture>'
 	);
 	return $html;
@@ -211,54 +209,54 @@ function sy_custom_logo($html){
 function create_video_cpt() {
 
 	$labels = array(
-		'name' => _x( 'Videos', 'Post Type General Name', 'textdomain' ),
-		'singular_name' => _x( 'Video', 'Post Type Singular Name', 'textdomain' ),
-		'menu_name' => _x( 'Videos', 'Admin Menu text', 'textdomain' ),
-		'name_admin_bar' => _x( 'Video', 'Add New on Toolbar', 'textdomain' ),
-		'archives' => __( 'Video Archives', 'textdomain' ),
-		'attributes' => __( 'Video Attributes', 'textdomain' ),
-		'parent_item_colon' => __( 'Parent Video:', 'textdomain' ),
-		'all_items' => __( 'All Videos', 'textdomain' ),
-		'add_new_item' => __( 'Add New Video', 'textdomain' ),
-		'add_new' => __( 'Add New', 'textdomain' ),
-		'new_item' => __( 'New Video', 'textdomain' ),
-		'edit_item' => __( 'Edit Video', 'textdomain' ),
-		'update_item' => __( 'Update Video', 'textdomain' ),
-		'view_item' => __( 'View Video', 'textdomain' ),
-		'view_items' => __( 'View Videos', 'textdomain' ),
-		'search_items' => __( 'Search Video', 'textdomain' ),
-		'not_found' => __( 'Not found', 'textdomain' ),
-		'not_found_in_trash' => __( 'Not found in Trash', 'textdomain' ),
-		'featured_image' => __( 'Featured Image', 'textdomain' ),
-		'set_featured_image' => __( 'Set featured image', 'textdomain' ),
+		'name'                  => _x( 'Videos', 'Post Type General Name', 'textdomain' ),
+		'singular_name'         => _x( 'Video', 'Post Type Singular Name', 'textdomain' ),
+		'menu_name'             => _x( 'Videos', 'Admin Menu text', 'textdomain' ),
+		'name_admin_bar'        => _x( 'Video', 'Add New on Toolbar', 'textdomain' ),
+		'archives'              => __( 'Video Archives', 'textdomain' ),
+		'attributes'            => __( 'Video Attributes', 'textdomain' ),
+		'parent_item_colon'     => __( 'Parent Video:', 'textdomain' ),
+		'all_items'             => __( 'All Videos', 'textdomain' ),
+		'add_new_item'          => __( 'Add New Video', 'textdomain' ),
+		'add_new'               => __( 'Add New', 'textdomain' ),
+		'new_item'              => __( 'New Video', 'textdomain' ),
+		'edit_item'             => __( 'Edit Video', 'textdomain' ),
+		'update_item'           => __( 'Update Video', 'textdomain' ),
+		'view_item'             => __( 'View Video', 'textdomain' ),
+		'view_items'            => __( 'View Videos', 'textdomain' ),
+		'search_items'          => __( 'Search Video', 'textdomain' ),
+		'not_found'             => __( 'Not found', 'textdomain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'textdomain' ),
+		'featured_image'        => __( 'Featured Image', 'textdomain' ),
+		'set_featured_image'    => __( 'Set featured image', 'textdomain' ),
 		'remove_featured_image' => __( 'Remove featured image', 'textdomain' ),
-		'use_featured_image' => __( 'Use as featured image', 'textdomain' ),
-		'insert_into_item' => __( 'Insert into Video', 'textdomain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'textdomain' ),
+		'insert_into_item'      => __( 'Insert into Video', 'textdomain' ),
 		'uploaded_to_this_item' => __( 'Uploaded to this Video', 'textdomain' ),
-		'items_list' => __( 'Videos list', 'textdomain' ),
+		'items_list'            => __( 'Videos list', 'textdomain' ),
 		'items_list_navigation' => __( 'Videos list navigation', 'textdomain' ),
-		'filter_items_list' => __( 'Filter Videos list', 'textdomain' ),
+		'filter_items_list'     => __( 'Filter Videos list', 'textdomain' ),
 	);
-	$args = array(
-		'label' => __( 'Video', 'textdomain' ),
-		'description' => __( '', 'textdomain' ),
-		'labels' => $labels,
-		'menu_icon' => '',
-		'supports' => array('title', 'thumbnail'),
-		'taxonomies' => array(),
-		'public' => false,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'menu_position' => 5,
-		'show_in_admin_bar' => true,
-		'show_in_nav_menus' => false,
-		'can_export' => true,
-		'has_archive' => false,
-		'hierarchical' => false,
+	$args   = array(
+		'label'               => __( 'Video', 'textdomain' ),
+		'description'         => __( '', 'textdomain' ),
+		'labels'              => $labels,
+		'menu_icon'           => '',
+		'supports'            => array( 'title', 'thumbnail' ),
+		'taxonomies'          => array(),
+		'public'              => false,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_position'       => 5,
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => false,
+		'can_export'          => true,
+		'has_archive'         => false,
+		'hierarchical'        => false,
 		'exclude_from_search' => true,
-		'show_in_rest' => true,
-		'publicly_queryable' => true,
-		'capability_type' => 'post',
+		'show_in_rest'        => true,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
 	);
 	register_post_type( 'video', $args );
 

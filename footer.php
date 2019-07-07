@@ -15,7 +15,15 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info container">
-			&copy; Shaun Young <?php echo date('Y') ?>
+			&copy; Shaun Young <?php echo date( 'Y' ); ?>
+
+			<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'footer',
+						)
+					);
+					?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

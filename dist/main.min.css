@@ -3301,13 +3301,16 @@ table {
   padding-bottom: 15px; }
   .site-header .site-branding {
     padding-bottom: 10%; }
+    .site-header .site-branding a::after {
+      display: none; }
 
 .banner {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   height: 0;
-  padding-bottom: 30%; }
+  padding-bottom: 30%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset; }
   @media (max-width: 767px) {
     .banner {
       background-attachment: scroll; } }
@@ -3481,6 +3484,11 @@ a {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 4px; }
+  .main-navigation .current_page_item > a::after,
+  .main-navigation .current-menu-item > a::after,
+  .main-navigation .current_page_ancestor > a::after,
+  .main-navigation .current-menu-ancestor > a::after {
+    transform: scale(1); }
 
 /* Small menu. */
 .menu-toggle,

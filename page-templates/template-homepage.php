@@ -18,7 +18,9 @@ get_header();
 			the_post();
 
 			            
-            get_template_part( 'template-parts/section', 'videos' );
+			get_template_part( 'template-parts/home/section', 'banner' );
+			get_template_part( 'template-parts/home/section', 'videos' );
+
 
 
 

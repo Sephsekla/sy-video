@@ -15,15 +15,22 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info container">
-			&copy; Shaun Young <?php echo date( 'Y' ); ?>
+			<div class="row justify-space-between">
+				<div class="col-12 col-lg-6">
+				&copy; Shaun Young <?php echo date( 'Y' ); ?>
 
-			<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-						)
-					);
-					?>
+				</div>
+				<div class="col-12 col-lg-6 right">
+
+<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'footer',
+			)
+		);
+		?>
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

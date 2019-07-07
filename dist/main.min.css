@@ -3295,6 +3295,13 @@ table {
   padding-bottom: 50px;
   text-transform: uppercase;
   font-weight: bold; }
+  .site-footer .menu ul {
+    list-style: none; }
+    .site-footer .menu ul li a {
+      color: #edf6f5; }
+
+.right {
+  text-align: right; }
 
 .site-header {
   padding-top: 15px;
@@ -3330,12 +3337,41 @@ article, .padsection {
   margin-top: 15px;
   display: block;
   overflow: hidden; }
+  .video::after {
+    display: none; }
   .video img {
     display: block;
     transition: 0.1s;
     transform: none; }
+  .video span {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translatey(-50%);
+    opacity: 0;
+    color: #edf6f5;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9), -1px -1px 5px rgba(0, 0, 0, 0.9); }
+    .video span::after {
+      position: absolute;
+      width: 80%;
+      bottom: -10px;
+      border-bottom: 5px solid #7dd8bd;
+      left: 0;
+      content: "";
+      transform-origin: left; }
+    .video span::after {
+      transition: 0.2s;
+      transform: scalex(0); }
+    .video span:hover::after {
+      transform: scalex(1); }
   .video:hover img {
     transform: scale(1.1); }
+  .video:hover span {
+    opacity: 1; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -3419,6 +3455,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: royalblue;
+  text-decoration: none;
   position: relative;
   display: inline-block; }
   a:visited {

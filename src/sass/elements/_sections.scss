@@ -27,10 +27,22 @@ article, .padsection{
         transform: none;
     }
 
+    .overlay{
+        @include overlay();
+        opacity: 0;
+        transition: 0.1s;
+        position: absolute;
+        top: 0;
+
+    
+
     span{
         @include fancy-title();
 
-        @include hover-title();
+        &::after{
+            transform: scalex(0);
+            transition: 0.2s;
+        }
 
         @include font-size(1.5);
 
@@ -41,20 +53,27 @@ article, .padsection{
         left: 50%;
         transform: translateX(-50%) translatey(-50%);
 
-        opacity: 0;
 
         color: $color__ow;
 
         text-shadow: 1px 1px 5px rgba(0,0,0,0.9), -1px -1px 5px rgba(0,0,0,0.9);
     }
 
+}
+
     &:hover{
         img{
             transform: scale(1.1);
         }
 
-        span{
+        .overlay{
             opacity: 1;
+
+            span{
+                &::after{
+                    transform: scalex(1);
+                }
+            }
         }
     }
 }

@@ -17,7 +17,9 @@
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <a href="<?php echo get_field('video',false,false)?>" class="lightbox-toggle video">
                                         <?php the_post_thumbnail("video") ?>
-                                        <span class="play-link">Play</span>
+                                        <div class="overlay">
+                                             <span class="play-link">Play</span>
+                                        </div>
                                      </a>
                                 </div>
 

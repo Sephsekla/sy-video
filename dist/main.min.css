@@ -3487,43 +3487,57 @@ article, .padsection {
     display: block;
     transition: 0.1s;
     transform: none; }
-  .video span {
-    position: relative;
-    display: inline-block;
-    font-size: 24px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translatey(-50%);
+  .video .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.5' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     opacity: 0;
-    color: #edf6f5;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9), -1px -1px 5px rgba(0, 0, 0, 0.9); }
-    .video span::after {
+    transition: 0.1s;
+    position: absolute;
+    top: 0; }
+    .video .overlay span {
+      position: relative;
+      display: inline-block;
+      font-size: 24px;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
       position: absolute;
-      width: 80%;
-      bottom: -10px;
-      border-bottom: 5px solid #7dd8bd;
-      left: 0;
-      content: "";
-      transform-origin: left; }
-    .video span.right {
-      text-align: right; }
-      .video span.right::after {
-        left: initial;
-        right: 0;
-        transform-origin: right; }
-    .video span::after {
-      transition: 0.2s;
-      transform: scalex(0); }
-    .video span:hover::after {
-      transform: scalex(1); }
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translatey(-50%);
+      color: #edf6f5;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9), -1px -1px 5px rgba(0, 0, 0, 0.9); }
+      .video .overlay span::after {
+        position: absolute;
+        width: 80%;
+        bottom: -10px;
+        border-bottom: 5px solid #7dd8bd;
+        left: 0;
+        content: "";
+        transform-origin: left; }
+      .video .overlay span.right {
+        text-align: right; }
+        .video .overlay span.right::after {
+          left: initial;
+          right: 0;
+          transform-origin: right; }
+      .video .overlay span::after {
+        transform: scalex(0);
+        transition: 0.2s; }
   .video:hover img {
     transform: scale(1.1); }
-  .video:hover span {
+  .video:hover .overlay {
     opacity: 1; }
+    .video:hover .overlay span::after {
+      transform: scalex(1); }
 
 /*--------------------------------------------------------------
 # Forms

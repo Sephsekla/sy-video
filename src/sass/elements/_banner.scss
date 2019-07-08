@@ -1,4 +1,4 @@
-.banner{
+.banner {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -7,22 +7,45 @@
 
     padding-bottom: 30%;
 
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.5)inset;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5)inset;
 
-    @media(max-width: 767px){
+    @media(max-width: 767px) {
         background-attachment: scroll;
     }
 
-    &.banner-home{
+    &.banner-home {
         position: relative;
         overflow: hidden;
 
-        > div{
+        >div {
             position: absolute;
             top: 50%;
             left: 0;
             transform: translatey(-50%);
 
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.5' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+            width: 100%;
+            height: 100%;
+            z-index: 30;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h1{
+                color: white;
+
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+                &::after{
+                    display: none;
+                }
+            }
         }
     }
 }

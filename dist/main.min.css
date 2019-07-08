@@ -3229,6 +3229,29 @@ h1 {
     left: 0;
     content: "";
     transform-origin: left; }
+  h1.right {
+    text-align: right; }
+    h1.right::after {
+      left: initial;
+      right: 0; }
+
+h2 {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem; }
+  h2::after {
+    position: absolute;
+    width: 80%;
+    bottom: -10px;
+    border-bottom: 5px solid #7dd8bd;
+    left: 0;
+    content: "";
+    transform-origin: left; }
+  h2.right {
+    text-align: right; }
+    h2.right::after {
+      left: initial;
+      right: 0; }
 
 p {
   margin-bottom: 1.5em; }
@@ -3268,6 +3291,9 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+.right {
+  text-align: right; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -3386,8 +3412,8 @@ table {
   text-transform: uppercase; }
 
 article, .padsection {
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-top: 80px;
+  padding-bottom: 80px; }
 
 .bg_ow {
   background-color: #edf6f5; }
@@ -3423,6 +3449,11 @@ article, .padsection {
       left: 0;
       content: "";
       transform-origin: left; }
+    .video span.right {
+      text-align: right; }
+      .video span.right::after {
+        left: initial;
+        right: 0; }
     .video span::after {
       transition: 0.2s;
       transform: scalex(0); }
@@ -3534,6 +3565,11 @@ a {
     left: 0;
     content: "";
     transform-origin: left; }
+  a.right {
+    text-align: right; }
+    a.right::after {
+      left: initial;
+      right: 0; }
   a::after {
     transition: 0.2s;
     transform: scalex(0); }

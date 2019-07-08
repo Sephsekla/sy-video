@@ -42,6 +42,15 @@
 		transform-origin: left;
 		
 	}
+
+	&.right{
+		text-align: right;
+
+		&::after{
+			left: initial;
+			right: 0;
+		}
+	}
 }
 
 @mixin hover-title(){

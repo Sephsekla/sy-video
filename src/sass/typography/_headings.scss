@@ -5,3 +5,8 @@ h1, h2, h3, h4, h5, h6 {
 h1{
 	@include fancy-title();
 }
+
+h2{
+	@include fancy-title();
+	margin-top: 1rem;
+}

@@ -1,5 +1,6 @@
 import './sass/style.scss';
 import { initPopup } from './js/videos';
+import { initScroll } from './js/animations';
 
 $ = jQuery;
 
@@ -8,4 +9,4 @@ window.jQuery = jQuery;
 
 initPopup();
 
-console.log("loaded");
+initScroll();

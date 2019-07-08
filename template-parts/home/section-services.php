@@ -1,7 +1,7 @@
 <section class="padsection bg_ow">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-6"><h2>Weddings</h2></div>
+            <div class="col-12 col-lg-6"><h2 class="title-animate" id="weddings">Weddings</h2></div>
             <div class="col-12 col-lg-6">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 
@@ -25,7 +25,7 @@
              
             </div>
 
-            <div class="col-12 col-lg-6 right"><h2 class="right">Events</h2></div>
+            <div class="col-12 col-lg-6 right"><h2 class="right title-animate" id="events">Events</h2></div>
         </div>
     </div>
 </section>

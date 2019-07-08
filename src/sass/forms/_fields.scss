@@ -19,6 +19,8 @@ textarea {
 	border-radius: 3px;
 	padding: 3px;
 
+	background-color: #fff !important;
+
 	&:focus {
 		color: $color__text-input-focus;
 	}
@@ -30,4 +32,10 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+.forminator-label{
+	color: $color__blue !important;
+	text-transform: uppercase;
+	font-weight: bold;
 }

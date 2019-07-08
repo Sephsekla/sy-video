@@ -2,11 +2,43 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
-h1{
+@mixin title(){
 	@include fancy-title();
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+h1{
+	@include title();
 }
 
 h2{
-	@include fancy-title();
+	@include title();
 	margin-top: 1rem;
 }
+
+.title-animate{
+	&::after{
+		transform: scalex(0);
+		transition: 0.2s;
+	}
+
+	&.animated{
+		&:after{
+			transform: scalex(1);
+		}
+	}
+}
+
+.sy-button{
+	background-color: transparent !important;
+	color: $color__blue !important;
+	@include fancy-title();
+	@include hover-title();
+
+	font-size: 1rem !important;
+	padding: 0 !important;
+	text-transform: uppercase;
+	font-weight: bold !important;
+
+} 

@@ -49,6 +49,7 @@
 		&::after{
 			left: initial;
 			right: 0;
+			transform-origin: right;
 		}
 	}
 }

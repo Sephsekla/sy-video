@@ -17,11 +17,19 @@
         position: relative;
         overflow: hidden;
 
+        @media(max-width: 767px) {
+            padding-bottom: 70%;
+        }
+
         >div {
             position: absolute;
             top: 50%;
             left: 0;
             transform: translatey(-50%);
+
+            @media(max-width: 767px){
+                width: 140%;
+            }
 
         }
 

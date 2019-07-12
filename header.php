@@ -47,7 +47,7 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 			</div>
-			<div class="col-6 col-md-9">
+			<div class="col-6 col-md-9 navigation-column">
 				<nav id="site-navigation" class="main-navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 					<span></span>

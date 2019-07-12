@@ -3425,7 +3425,8 @@ table {
 
 .site-header {
   padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  position: relative; }
   .site-header .site-branding {
     padding-bottom: 10%; }
     .site-header .site-branding a::after {
@@ -3444,11 +3445,17 @@ table {
   .banner.banner-home {
     position: relative;
     overflow: hidden; }
+    @media (max-width: 767px) {
+      .banner.banner-home {
+        padding-bottom: 70%; } }
     .banner.banner-home > div {
       position: absolute;
       top: 50%;
       left: 0;
       transform: translatey(-50%); }
+      @media (max-width: 767px) {
+        .banner.banner-home > div {
+          width: 140%; } }
     .banner.banner-home .overlay {
       background-color: rgba(0, 0, 0, 0.6);
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
@@ -3661,13 +3668,25 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.navigation-column {
+  position: static; }
+
+.menu-main-menu-container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #edf6f5;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  top: 100%;
+  z-index: 100; }
+
 .main-navigation {
   clear: both;
   display: block;
-  text-align: right;
-  width: 100%; }
+  text-align: right; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -3707,9 +3726,6 @@ a {
     transform: scale(1); }
 
 /* Small menu. */
-.main-navigation.toggled ul {
-  display: block; }
-
 .menu-toggle {
   display: inline-block;
   appearance: none;
@@ -3724,9 +3740,19 @@ a {
     left: 0;
     border-bottom: 2px solid #7dd8bd; }
 
+.main-navigation.toggled .menu-main-menu-container {
+  max-height: 100vh; }
+
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
+  .menu-main-menu-container {
+    position: relative;
+    background-color: transparent;
+    max-height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 0; }
   .main-navigation ul {
     display: block; } }
 

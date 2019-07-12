@@ -1,12 +1,31 @@
+.navigation-column{
+	position: static;
+}
+
+
+.menu-main-menu-container{
+
+	width: 100%;
+
+	position: absolute;
+	left: 0;
+	background-color: $color__ow;
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+	top: 100%;
+	z-index: 100;
+	}
+
 .main-navigation {
 	clear: both;
 	display: block;
 	text-align: right;
 
-	width: 100%;
+
 
 	ul {
-		display: none;
+
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -82,9 +101,7 @@
 
 /* Small menu. */
 
-.main-navigation.toggled ul {
-	display: block;
-}
+
 
 .menu-toggle{
 	display: inline-block;
@@ -107,10 +124,30 @@
 
 }
 
+.main-navigation.toggled{
+
+	.menu-main-menu-container{
+		max-height: 100vh;
+	}
+	
+	}
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
+
+	.menu-main-menu-container{
+
+		position: relative;
+		background-color: transparent;
+		max-height: 100vh;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		top: 0;
+	
+		}
+
 	.main-navigation ul {
 		display: block;
 	}

@@ -1,6 +1,7 @@
 .main-navigation {
 	clear: both;
 	display: block;
+	text-align: right;
 
 	width: 100%;
 
@@ -86,7 +87,7 @@
 }
 
 .menu-toggle{
-	display: block;
+	display: inline-block;
 	appearance: none;
 	border: 0;
 	background-color: transparent;

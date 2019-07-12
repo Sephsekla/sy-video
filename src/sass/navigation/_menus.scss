@@ -80,9 +80,30 @@
 }
 
 /* Small menu. */
-.menu-toggle,
+
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.menu-toggle{
+	display: block;
+	appearance: none;
+	border: 0;
+	background-color: transparent;
+	position: relative;
+
+	height: 30px;
+	width: 30px;
+
+	span{
+		position: absolute;
+		width: 100%;
+
+		left: 0;
+
+		border-bottom: 2px solid $color__teal;
+	}
+
 }
 
 @media screen and (min-width: 37.5em) {

@@ -7,7 +7,8 @@ module.exports = merge(common, {
  mode: 'development',
  devtool: 'inline-source-map',
  devServer: {
-   contentBase: './dist'
+   contentBase: './dist',
+   sourceMap: true
   },
  
   plugins: [
@@ -23,7 +24,9 @@ module.exports = merge(common, {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env']
+            presets: ['babel-preset-env'],
+            sourceMap: true
+
           }
         },
         {

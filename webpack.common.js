@@ -1,12 +1,16 @@
 const path = require('path');
 
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const extractSass = new ExtractTextPlugin({
-    filename: "main.min.css",
+    filename: "main.min.css"
+
 });
 
 const extractAdmin = new ExtractTextPlugin({
-  filename: "fallback.min.css",
+  filename: "admin.min.css",
 });
 
 const extractSettings = {
@@ -28,9 +32,8 @@ const extractSettings = {
   fallback: "style-loader"
 }
 
-module.exports =  {
+module.exports = {
 
-   
 
   resolve: {
     alias: {
@@ -42,11 +45,12 @@ module.exports =  {
   {
   
     main: './src/index.js',
+
   }
   ,
   plugins: [
       extractSass,
-    extractAdmin
+      extractAdmin
   ],
   output: {
     filename: '[name].js',
@@ -64,7 +68,7 @@ module.exports =  {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        use: [{
+       use: [{
           loader: 'babel-loader',
           options: {
             presets: ['babel-preset-env']
@@ -87,12 +91,12 @@ module.exports =  {
 
       {
         test: /\.scss$/,
-        exclude: /fallback\.scss$/,
+        exclude: /admin\.scss$/,
         use: extractSass.extract(extractSettings)
       },
 
      {
-        test: /fallback\.scss$/,
+        test: /admin\.scss$/,
         use: extractAdmin.extract(extractSettings)
       }, 
       

@@ -41,5 +41,9 @@ textarea {
 }
 
 .forminator-custom-form-25.forminator-design--flat .forminator-select-container .forminator-select-list .forminator-dropdown-list li.current{
-	background-color: $color__teal;
+	background-color: $color__teal !important;
+}
+
+.forminator-custom-form-25.forminator-design--flat .forminator-is_hover .forminator-select-container .forminator-select-list .forminator-dropdown-handle [class*=forminator-icon-] {
+    color: $color__teal !important;
 }

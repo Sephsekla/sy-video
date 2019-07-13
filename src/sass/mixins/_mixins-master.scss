@@ -52,6 +52,18 @@
 			transform-origin: right;
 		}
 	}
+
+	&.right-lg{
+		@media(min-width: 992px){
+			text-align: right;
+
+		&::after{
+			left: initial;
+			right: 0;
+			transform-origin: right;
+		}
+		}
+	}
 }
 
 @mixin hover-title(){

@@ -16,4 +16,10 @@ textarea {
 
 .right{
 	text-align: right;
+
+	&-lg{
+		@media(min-width: 992px){
+			text-align: right;
+		}
+	}
 }

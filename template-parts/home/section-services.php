@@ -15,7 +15,10 @@
 
 <section class="padsection bg_white">
     <div class="container">
-        <div class="row">
+        <div class="row flex-lg-row-reverse">
+
+        <div class="col-12 col-lg-6 right-lg"><h2 class="right-lg title-animate" id="events">Events</h2></div>
+       
            
             <div class="col-12 col-lg-6">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -24,8 +27,7 @@
 
              
             </div>
-
-            <div class="col-12 col-lg-6 right"><h2 class="right title-animate" id="events">Events</h2></div>
-        </div>
+            </div>
+           
     </div>
 </section>

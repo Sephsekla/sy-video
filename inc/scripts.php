@@ -20,3 +20,13 @@ function sy_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'sy_scripts' );
+
+
+function sy_admin_scripts() {
+
+	wp_enqueue_style( 'sy-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700' );
+
+	wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/dist/admin.min.css', array( 'sy-fonts' ), filemtime( get_template_directory() . '/dist/admin.min.css' ) );
+
+}
+add_action( 'login_enqueue_scripts', 'sy_admin_scripts' );

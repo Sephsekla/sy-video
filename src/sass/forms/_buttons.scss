@@ -1,22 +1,23 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
-	line-height: 1;
-	padding: .6em 1em .4em;
+input[type="submit"],
+.button,
+.wp-core-ui .button-primary,
+.sy-button{
+	background-color: transparent !important;
+	color: $color__blue !important;
+	@include fancy-title();
+	@include hover-title();
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
+	font-size: 1rem !important;
+	padding: 0 !important;
+	text-transform: uppercase;
+	font-weight: bold !important;
 
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
-}
+	text-shadow: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+} 

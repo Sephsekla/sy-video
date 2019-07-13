@@ -6,6 +6,24 @@ h1, h2, h3, h4, h5, h6 {
 	@include fancy-title();
 	text-transform: uppercase;
 	letter-spacing: 4px;
+
+	&.right{
+		margin-right: -4px;
+		&::after{
+			right: 4px;
+		}
+	}
+
+	@media(min-width: 992px){
+
+	&.right-lg{
+		margin-right: -4px;
+		&::after{
+			right: 4px;
+		}
+	}
+
+}
 }
 
 h1{
@@ -15,6 +33,7 @@ h1{
 h2{
 	@include title();
 	margin-top: 1rem;
+
 }
 
 .title-animate{

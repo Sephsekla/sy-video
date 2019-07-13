@@ -23,7 +23,7 @@
         transform-origin: center;
         transition: 0.2s;
 
-        border-bottom: 2px solid $color__teal;
+        border-bottom: 4px solid $color__teal;
 
 
         &:first-child{
@@ -32,7 +32,7 @@
         }
 
         &:nth-child(2), &:nth-child(3){
-            top: 14px;
+            top: 13px;
         }
 
         &:last-child{

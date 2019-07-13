@@ -1,4 +1,3 @@
-
 <?php
 // Register Custom Post Type Video
 function create_video_cpt() {

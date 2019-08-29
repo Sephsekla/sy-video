@@ -39,3 +39,14 @@ figure {
 @import 'banner';
 
 @import 'sections';
+
+.contact-methods{
+	a{
+		font-weight: normal;
+		text-transform: none;
+
+		&::after{
+			display: none;
+		}
+	}
+}

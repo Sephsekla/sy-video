@@ -29,7 +29,7 @@
 </div>
 <div class="overlay">
     <div class="container">
-         <h1>Lorem Ipsum Dolor <span class="color_teal">Sit Amet</span></h1>
+         <h1><?php echo $banner['text_1'] ?> <span class="color_teal"><?php echo $banner['text_2'] ?></span></h1>
     </div>
 </div>
 </section>

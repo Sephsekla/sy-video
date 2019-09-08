@@ -1,35 +1,35 @@
+<?php $section = get_field('section_2'); 
+
+
+?>
+
 <section class="padsection bg_ow">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-6"><h2 class="title-animate" id="weddings">Weddings</h2></div>
+            <div class="col-12 col-lg-6"><h2 class="title-animate" id="about"><?php echo $section['title'] ?></h2></div>
             <div class="col-12 col-lg-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
 
-                 <p><a href="<?php the_permalink(38) ?>">Read More</a></p>
+            <?php echo $section['content'];
+            
+            
+            if($section['cta']){
+
+                ?>
+                           
+
+                <p><a href="<?php echo $section['cta']['url'] ?>" target="<?php echo $section['cta']['target'] ?>"><?php echo $section['cta']['title'] ?></a></p>
+
+                <?php
+
+            }
+
+            ?>
+            
+            
+           
              
             </div>
         </div>
         
-    </div>
-</section>
-
-<section class="padsection bg_white">
-    <div class="container">
-        <div class="row flex-lg-row-reverse">
-
-        <div class="col-12 col-lg-6 right-lg"><h2 class="right-lg title-animate" id="events">Events</h2></div>
-       
-           
-            <div class="col-12 col-lg-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-
-                 <p><a href="<?php the_permalink(41) ?>">Read More</a></p>
-            </div>
-            </div>
-           
     </div>
 </section>

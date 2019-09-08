@@ -1,6 +1,6 @@
 <section class="padsection">
     <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center no-gutters">
                <?php
 
                     $video_query = new WP_Query(array(
@@ -25,6 +25,7 @@
 
                 <?php
                             }
+                            wp_reset_postdata();
                         }
                 ?>  
             </div>

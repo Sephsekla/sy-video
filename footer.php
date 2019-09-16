@@ -20,8 +20,14 @@
 				<p>
 				&copy; Shaun Young <?php echo date( 'Y' ); ?>
 </p>
-<p class="footer-contact"><strong>E</strong> example@example.com<br>
-<strong>T</strong> 01234 567890</p>
+<?php
+                
+                $contact = get_field('contact_methods',9);
+                
+                ?>
+                <p class="contact-methods"><strong>E</strong> <a href="mailto:<?php echo $contact['email'] ?>"><?php echo $contact['email'] ?></a><br>
+                <strong>T</strong> <a href=tel:<?php echo $contact['phone'] ?>"><?php echo $contact['phone'] ?></a>
+                </p>
 
 				</div>
 				<div class="col-12 col-lg-6 right">

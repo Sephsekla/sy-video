@@ -18,7 +18,7 @@ get_header();
 			the_post();
 
 			            
-			get_template_part( 'template-parts/home/section', 'banner' );
+			get_template_part( 'template-parts/shared/banner', 'video' );
 			get_template_part( 'template-parts/home/section', 'videos' );
 			get_template_part( 'template-parts/home/section', 'services' );
 			get_template_part( 'template-parts/shared/section', 'instagram' );

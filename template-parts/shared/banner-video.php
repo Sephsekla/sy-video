@@ -5,6 +5,8 @@
         $banner = get_field('banner'); 
     
         $iframe = $banner['video'];
+
+        if($iframe){
     
             // use preg_match to find iframe src
         preg_match('/src="(.+?)"/', $iframe, $matches);
@@ -22,6 +24,8 @@
 
         // echo $iframe
         echo $iframe;
+
+    }
     
     
     

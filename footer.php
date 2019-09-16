@@ -25,7 +25,7 @@
                 $contact = get_field('contact_methods',9);
                 
                 ?>
-                <p class="contact-methods"><strong>E</strong> <a href="mailto:<?php echo $contact['email'] ?>"><?php echo $contact['email'] ?></a><br>
+                <p class="contact-methods footer-contact"><strong>E</strong> <a href="mailto:<?php echo $contact['email'] ?>"><?php echo $contact['email'] ?></a><br>
                 <strong>T</strong> <a href=tel:<?php echo $contact['phone'] ?>"><?php echo $contact['phone'] ?></a>
                 </p>
 

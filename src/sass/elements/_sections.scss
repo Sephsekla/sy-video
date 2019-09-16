@@ -33,6 +33,15 @@ article, .padsection{
         transition: 0.1s;
         position: absolute;
         top: 0;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        padding: 10px;
+
+        .inner{
+            border: 5px solid $color__teal;
+            padding: 10px;
+        }
 
     
 

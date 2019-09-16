@@ -1,6 +1,6 @@
 <section class="padsection">
     <div class="container">
-            <div class="row justify-content-center no-gutters">
+            <div class="row justify-content-center">
                <?php
 
                     $video_query = new WP_Query(array(

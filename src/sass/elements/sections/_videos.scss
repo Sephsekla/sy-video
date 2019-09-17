@@ -1,0 +1,123 @@
+.video{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: block;
+    overflow: hidden;
+    &::after{
+        display: none;
+    }
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border: 15px solid white;
+        z-index: 20;
+    }
+
+
+        position: relative;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        height: 0;
+        padding-bottom: 50%;
+        @media(min-width: 992px){
+        padding-bottom: 100%;
+        }
+
+    
+    img{
+        display: none;
+        transition: 0.1s;
+        transform: none;
+    }
+
+    @supports(object-fit: cover){
+        background-image: none !important;
+
+        img{
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translatex(-50%) translatey(-50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+
+
+
+    .overlay{
+        @include overlay();
+        opacity: 0;
+        transition: 0.1s;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        padding: 10px;
+
+        .inner{
+            border: 5px solid $color__teal;
+            padding: 10px;
+            width: 100%;
+        }
+
+    
+
+    span{
+        @include fancy-title();
+
+        &::after{
+            transform: scalex(0);
+            transition: 0.2s;
+        }
+
+        @include font-size(1.5);
+
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translatey(-50%);
+
+
+        color: $color__ow;
+
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.9), -1px -1px 5px rgba(0,0,0,0.9);
+    }
+
+}
+
+    &:hover{
+        img{
+            transform: translatex(-50%) translatey(-50%) scale(1.1);
+        }
+
+        .overlay{
+            opacity: 1;
+
+            span{
+                &::after{
+                    transform: scalex(1);
+                }
+            }
+        }
+    }
+}
+
+.wide .video{
+    @media(min-width: 992px){
+        padding-bottom: 50%;
+        }
+}

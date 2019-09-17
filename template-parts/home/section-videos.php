@@ -13,8 +13,8 @@
                             while($video_query->have_posts()){
                                 $video_query->the_post();
 
-                                echo (0 === $i%5) ? '<div class="col-12 col-md-6 video-col wide">' : '<div class="col-12 col-md-6 col-lg-3 video-col">'
-
+                                echo (0 === $i%5) ? '<div class="col-12 col-md-6 video-col wide">' : '<div class="col-12 col-md-6 col-lg-3 video-col">';
+                                $i++;
 
                                 ?>
 

@@ -1,6 +1,5 @@
 .video{
-    margin-bottom: 15px;
-    margin-top: 15px;
+
     display: block;
     overflow: hidden;
     &::after{
@@ -15,7 +14,7 @@
         height: 100%;
         pointer-events: none;
         border: 15px solid white;
-        z-index: 20;
+        z-index: 40;
         display: block;
         content: "";
     }
